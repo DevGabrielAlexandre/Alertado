@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Aviso</title>
+</head>
+<style>
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(186, 224, 247);
+}
+.firework
+{
+    position: absolute;
+}
+
+.explosion
+{
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    width: 4px;
+    height: 80px;
+    transform-origin: 50% 100%;
+    overflow: hidden;
+}
+.explosion:nth-child(1)
+{
+    transform: rotate(0deg)translateY(-15px);
+}
+.explosion:nth-child(2)
+{
+    transform: rotate(30deg)translateY(-15px);
+}
+.explosion:nth-child(3)
+{
+    transform: rotate(60deg)translateY(-15px);
+}
+.explosion:nth-child(4)
+{
+    transform: rotate(90deg)translateY(-15px);
+}
+.explosion:nth-child(5)
+{
+    transform: rotate(120deg)translateY(-15px);
+}
+.explosion:nth-child(6)
+{
+    transform: rotate(150deg)translateY(-15px);
+}
+.explosion:nth-child(7)
+{
+    transform: rotate(180deg)translateY(-15px);
+}
+.explosion:nth-child(8)
+{
+    transform: rotate(210deg)translateY(-15px);
+}
+.explosion:nth-child(9)
+{
+    transform: rotate(240deg)translateY(-15px);
+}
+.explosion:nth-child(10)
+{
+    transform: rotate(270deg)translateY(-15px);
+}
+.explosion:nth-child(11)
+{
+    transform: rotate(300deg)translateY(-15px);
+}
+.explosion:nth-child(12)
+{
+    transform: rotate(330deg)translateY(-15px);
+}
+
+.explosion::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 40px;
+    background-color: rgb(238, 238, 101);
+
+}
+
+@keyframes explosion
+{
+    0% 
+    {
+        top: 100%;
+    }
+
+    33%, 100%
+    {
+        top: -50%;
+    }
+}
+
+#firework1
+{
+    left: 50%;
+    top: 30%;
+    transform: scale(1);
+}
+
+#firework1 .explosion::before
+{
+    animation: explosion 2s ease-in-out infinite;
+}
+ 
+#firework2
+{
+    left: 40%;
+    top: 20%;
+    transform: scale(.7);
+}
+#firework2 .explosion::before
+{
+    animation: explosion 2s .6s ease-in-out infinite;
+}
+ 
+#firework3
+{
+    left: 60%;
+    top:  40% ;
+    transform: scale(.4);
+}
+#firework3 .explosion::before
+{
+    animation: explosion 2s .4s ease-in-out infinite;
+}
+
+.card{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 30px;
+    transform: scale(0.4);
+}
+.card-title{
+    transform: scale(1.3);
+    color: green;
+}
+.card-subtitle{
+    color: red;
+    margin-top: 3%;
+}
+
+
+.crescer{
+    transition: 3s;
+    transform: scale(0.9);
+}
+</style>
+<body>
+
+<div class="card" id="card">
+    <div class="card-body">
+        <h5 class="card-title">Registro Salvo!</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Precisamos do seu serviço</h6>
+        <p class="card-text">"O único lugar onde sucesso vem antes do trabalho é no dicionário."</p>
+      </div>
+</div>
+    
+
+    <div class="firework">
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+    </div>
+    <body>
+    <div class="firework" id="firework1">
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+    </div>
+    <div class="firework" id="firework2">
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+    </div>
+    <div class="firework" id="firework3">
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+        <div class="explosion"></div>
+    </div>
+</body>
+
+<script>
+    const card = document.getElementById('card');
+    function crescer(){
+        card.classList.toggle('crescer');
+    }
+    crescer();
+</script>
+</html>
